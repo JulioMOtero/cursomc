@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.Optional;
 
 @Entity
 public class Categoria implements Serializable {
@@ -52,6 +53,7 @@ public class Categoria implements Serializable {
     public int hashCode() {
         return Objects.hash(id);
     }
+
 
 
 }

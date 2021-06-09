@@ -1,5 +1,5 @@
 package com.juliootero.cursomc.resources;
-import com.juliootero.cursomc.domain.Categoria;  
+import com.juliootero.cursomc.domain.Categoria;
 import com.juliootero.cursomc.services.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

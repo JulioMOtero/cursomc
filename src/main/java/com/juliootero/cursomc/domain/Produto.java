@@ -1,5 +1,6 @@
 package com.juliootero.cursomc.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jdk.jfr.Enabled;
 
 import javax.persistence.*;
@@ -20,6 +21,7 @@ public class Produto implements Serializable {
     private String nome;
     private Double preco;
 
+    @JsonBackReference
     @ManyToMany
     @JoinTable(
             name = "PRODUTO_CATEGORIA",

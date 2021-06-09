@@ -22,7 +22,7 @@ public class CursomcApplication implements CommandLineRunner {
 	@Autowired
 	private ProdutoRepository produtoRepository;
 
-	public static void main(String[] args) {  
+	public static void main(String[] args) {
 
 		SpringApplication.run(CursomcApplication.class, args);
 	}

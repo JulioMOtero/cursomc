@@ -21,7 +21,7 @@ public class CursomcApplication implements CommandLineRunner {
 		SpringApplication.run(CursomcApplication.class, args);
 	}
 
-	@Override  
+	@Override
 	public void run(String... args) throws Exception {
 
 		Categoria cat1 = new Categoria(null, "Informática");

@@ -1,5 +1,6 @@
 package com.juliootero.cursomc.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.juliootero.cursomc.domain.enums.EstadoPagamento;
 
 import javax.persistence.Entity;
@@ -9,12 +10,14 @@ import java.util.Date;
 public class PagamentoComBoleto extends Pagamento{
     private static final long serialVersionUID = 1L;
 
-    private Date dataVenciemnto;
+    @JsonFormat(pattern = "dd/MM/yyy HH:mm")
+    private Date dataVencimento;
+    @JsonFormat(pattern = "dd/MM/yyy HH:mm")
     private Date dataPagamento;
 
     public PagamentoComBoleto(Integer id, EstadoPagamento estado, Pedido pedido, Date dataVenciemnto, Date dataPagamento) {
         super(id, estado, pedido);
-        this.dataVenciemnto = dataVenciemnto;
+        this.dataVencimento = dataVenciemnto;
         this.dataPagamento = dataPagamento;
     }
 
@@ -23,11 +26,11 @@ public class PagamentoComBoleto extends Pagamento{
     }
 
     public Date getDataVenciemnto() {
-        return dataVenciemnto;
+        return dataVencimento;
     }
 
     public void setDataVenciemnto(Date dataVenciemnto) {
-        this.dataVenciemnto = dataVenciemnto;
+        this.dataVencimento = dataVenciemnto;
     }
 
     public Date getDataPagamento() {

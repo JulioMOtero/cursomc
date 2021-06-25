@@ -1,6 +1,6 @@
 package com.juliootero.cursomc.domain;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -16,7 +16,7 @@ public class Cidade implements Serializable {
     private Integer id;
     private String nome;
 
-    @JsonManagedReference
+
     @ManyToOne
     @JoinColumn(name = "estado_id")
     private Estado estado;
@@ -45,7 +45,7 @@ public class Cidade implements Serializable {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
+it 
     public Estado getEstado() {
         return estado;
     }

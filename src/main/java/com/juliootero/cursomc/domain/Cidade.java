@@ -45,7 +45,7 @@ public class Cidade implements Serializable {
     public void setNome(String nome) {
         this.nome = nome;
     }
-it 
+
     public Estado getEstado() {
         return estado;
     }

@@ -2,6 +2,7 @@ package com.juliootero.cursomc.services;
 
 
 import com.juliootero.cursomc.domain.Categoria;
+import com.juliootero.cursomc.dto.CategoriaDTO;
 import com.juliootero.cursomc.repositories.CategoriaRepository;
 import com.juliootero.cursomc.services.exceptions.DataIntegrityException;
 import com.juliootero.cursomc.services.exceptions.ObjectNotFoundException;
@@ -51,5 +52,9 @@ public class CategoriaService {
         PageRequest pageRequest = PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction),
                 orderBy);
         return  repo.findAll(pageRequest);
+    }
+
+    public Categoria fromDTO(CategoriaDTO objDTO){
+        return new Categoria(objDTO.getId(), objDTO.getNome());
     }
 }

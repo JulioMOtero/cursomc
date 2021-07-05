@@ -11,6 +11,7 @@ public class ClienteDTO implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Integer id;
+
     @NotEmpty(message = "Preenchimento obrigatório")
     @Length(min = 5, max = 120,message = "O Nome deve conter de 5 a 120 caracteres")
     private String nome;

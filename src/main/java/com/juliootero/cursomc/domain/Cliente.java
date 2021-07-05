@@ -11,6 +11,7 @@ import java.util.*;
 @Entity
 public class Cliente implements Serializable {
     private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -20,7 +21,7 @@ public class Cliente implements Serializable {
     private Integer tipo;
 
 
-    @OneToMany( mappedBy = "cliente")
+    @OneToMany( mappedBy = "cliente",cascade = CascadeType.ALL)
     private List<Endereco> enderecos = new ArrayList<>();
 
     @ElementCollection
@@ -35,6 +36,7 @@ public class Cliente implements Serializable {
     }
 
     public Cliente(Integer id, String nome, String email, String cpfOuCnpj, TipoCliente tipo) {
+        super();
         this.id = id;
         this.nome = nome;
         this.email = email;

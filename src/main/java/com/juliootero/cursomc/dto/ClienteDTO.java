@@ -1,12 +1,14 @@
 package com.juliootero.cursomc.dto;
 
 import com.juliootero.cursomc.domain.Cliente;
+import com.juliootero.cursomc.services.validation.ClienteUpdate;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Email;
 import java.io.Serializable;
 
+@ClienteUpdate
 public class ClienteDTO implements Serializable {
     private static final long serialVersionUID = 1L;
 

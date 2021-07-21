@@ -1,8 +1,6 @@
 package com.juliootero.cursomc.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import jdk.jfr.Enabled;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -35,6 +33,7 @@ public class Produto implements Serializable {
 
     public Produto() {
     }
+
 
     public Produto(Integer id, String nome, Double preco) {
         this.id = id;
@@ -95,8 +94,8 @@ public class Produto implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Produto produto = (Produto) o;
-        return id.equals(produto.id);
+        Pedido produto = (Pedido) o;
+        return id.equals(produto.getId());
     }
 
     @Override
